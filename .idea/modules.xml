@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/learning.iml" filepath="$PROJECT_DIR$/.idea/modules/learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/learning-build.iml" filepath="$PROJECT_DIR$/.idea/modules/learning-build.iml" />
+      <module fileurl="file://$USER_HOME$/spark-1.3.0-bin-hadoop2.4/lib/lib.iml" filepath="$USER_HOME$/spark-1.3.0-bin-hadoop2.4/lib/lib.iml" />
+    </modules>
+  </component>
+</project>
