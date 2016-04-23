@@ -5,20 +5,32 @@ import java.io.File
 import javax.imageio.ImageIO
 import java.awt.image.BufferedImage
 
+import akka.actor.Actor
+import akka.actor.Actor.Receive
+
 /**
   * Created by yaron on 21/04/16.
   */
-class ImageProcessor extends LazyLogging {
 
-  def start() = {
+class ImageProcessor extends Actor with LazyLogging {
+
+  override def receive: Receive = {
+    case "start" => start()
+    case _       => println("Unknown command")
+  }
+
+  private def start() = {
     logger.info("image processor started")
 
-    readAndProcess("/home/yaron/SampleImages/img.jpg", "/home/yaron/SampleImages/test.jpg")
+    val input: String = "/home/yaron/SampleImages/img.jpg"
+    val output: String = "/home/yaron/SampleImages/test.jpg"
+
+    readAndProcess(input, output)
 
     logger.info("image processor ended")
   }
 
-  def process(img: BufferedImage): BufferedImage = {
+  private def processImpl(img: BufferedImage): BufferedImage = {
     // obtain width and height of image
     val w = img.getWidth
     val h = img.getHeight
@@ -38,15 +50,13 @@ class ImageProcessor extends LazyLogging {
     out
   }
 
-  def readAndProcess(source: String, dest: String) {
+  private def readAndProcess(source: String, dest: String) {
     // read original image, and obtain width and height
     val photo1 = ImageIO.read(new File(source))
 
-    val photo2 = process(photo1)
+    val photo2 = processImpl(photo1)
 
     // save image to file
     ImageIO.write(photo2, "jpg", new File(dest))
   }
-
-
 }
