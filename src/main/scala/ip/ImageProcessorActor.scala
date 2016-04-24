@@ -5,7 +5,7 @@ import java.io.File
 import javax.imageio.ImageIO
 import java.awt.image.BufferedImage
 
-import akka.actor.Actor
+import akka.actor.{Actor, PoisonPill}
 import akka.actor.Actor.Receive
 
 /**
@@ -28,6 +28,10 @@ class ImageProcessorActor extends Actor with LazyLogging {
     readAndProcess(input, output)
 
     logger.info("image processor ended")
+
+    context.stop(self)
+
+    context.system.shutdown()
   }
 
   private def processImpl(img: BufferedImage): BufferedImage = {
