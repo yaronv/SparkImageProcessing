@@ -154,5 +154,8 @@
     <orderEntry type="library" name="SBT: oro:oro:2.0.8:jar" level="project" />
     <orderEntry type="library" name="SBT: stax:stax-api:1.0.1:jar" level="project" />
     <orderEntry type="library" name="SBT: xmlenc:xmlenc:0.52:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.akka:akka-actor_2.10:2.3.15:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.akka:akka-cluster_2.10:2.3.15:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.akka:akka-remote_2.10:2.3.15:jar" level="project" />
   </component>
 </module>

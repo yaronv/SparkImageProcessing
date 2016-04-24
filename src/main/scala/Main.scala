@@ -1,6 +1,6 @@
 import akka.actor.{ActorSystem, Props}
 import com.typesafe.scalalogging.slf4j.LazyLogging
-import ip.ImageProcessor
+import ip.{ImageProcessor, ImageProcessorActor}
 
 /**
   * Created by yaron on 21/04/16.
@@ -11,11 +11,17 @@ object Main extends App with LazyLogging {
 
     logger.info("application started")
 
-    val system = ActorSystem("HelloSystem")
+    Runner.run(2551)
 
-    val ipActor = system.actorOf(Props[ImageProcessor], name = "ip-actor")
-
-    ipActor ! "start"
   }
 
+}
+
+/**
+  * General cluster runner object
+  */
+object Runner {
+  def run(port: Int): Unit = {
+    new ImageProcessor(port)
+  }
 }
