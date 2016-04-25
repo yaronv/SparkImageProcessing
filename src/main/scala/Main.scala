@@ -1,6 +1,5 @@
-import akka.actor.{ActorSystem, Props}
 import com.typesafe.scalalogging.slf4j.LazyLogging
-import ip.{ImageProcessor, ImageProcessorActor}
+import ip.ImageProcessor
 
 /**
   * Created by yaron on 21/04/16.

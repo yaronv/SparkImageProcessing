@@ -157,5 +157,15 @@
     <orderEntry type="library" name="SBT: com.typesafe.akka:akka-actor_2.10:2.3.15:jar" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.akka:akka-cluster_2.10:2.3.15:jar" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.akka:akka-remote_2.10:2.3.15:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco:javacpp:1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco:javacv:1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco.javacpp-presets:artoolkitplus:2.3.1-1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco.javacpp-presets:ffmpeg:2.8.1-1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco.javacpp-presets:flandmark:1.07-1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco.javacpp-presets:flycapture:2.8.3.1-1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco.javacpp-presets:libdc1394:2.2.3-1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco.javacpp-presets:libfreenect:0.5.3-1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco.javacpp-presets:opencv:3.0.0-1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bytedeco.javacpp-presets:videoinput:0.200-1.1:jar" level="project" />
   </component>
 </module>

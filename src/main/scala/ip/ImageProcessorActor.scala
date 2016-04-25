@@ -1,12 +1,11 @@
 package ip
 
-import com.typesafe.scalalogging.slf4j.LazyLogging
+import java.awt.image.BufferedImage
 import java.io.File
 import javax.imageio.ImageIO
-import java.awt.image.BufferedImage
 
-import akka.actor.{Actor, PoisonPill}
-import akka.actor.Actor.Receive
+import akka.actor.Actor
+import com.typesafe.scalalogging.slf4j.LazyLogging
 
 /**
   * Created by yaron on 21/04/16.

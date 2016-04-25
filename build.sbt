@@ -14,4 +14,8 @@ libraryDependencies += "org.apache.spark" %% "spark-streaming" % "1.3.0" % "comp
 
 libraryDependencies += "com.typesafe.akka" %% "akka-cluster" % "2.3.15" % "compile"
 
+classpathTypes += "maven-plugin"
+
+libraryDependencies += "org.bytedeco" % "javacv" % "1.1" % "compile"
+
 resolvers += "Akka Repository" at "http://repo.akka.io/releases/"

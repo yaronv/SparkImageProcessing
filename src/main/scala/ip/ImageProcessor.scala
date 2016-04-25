@@ -1,6 +1,6 @@
 package ip
 
-import akka.actor.{ActorSystem, PoisonPill, Props}
+import akka.actor.{ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
 import props.Params
 /**
