@@ -18,4 +18,6 @@ classpathTypes += "maven-plugin"
 
 libraryDependencies += "org.bytedeco" % "javacv" % "1.1" % "compile"
 
+libraryDependencies += "org.bytedeco" % "javacpp" % "1.1" % "compile"
+
 resolvers += "Akka Repository" at "http://repo.akka.io/releases/"

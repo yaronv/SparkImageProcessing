@@ -8,11 +8,10 @@ import props.Params
   */
 class ImageProcessor(clusterPort: Int) {
 
-  val conf = ConfigFactory.parseString(s"akka.remote.netty.tcp.port=$clusterPort")
+  private val conf = ConfigFactory.parseString(s"akka.remote.netty.tcp.port=$clusterPort")
     .withFallback(ConfigFactory.load("application.conf"))
 
-  val system = ActorSystem(Params.CLUSTER_NAME)
+  private val system = ActorSystem(Params.CLUSTER_NAME, conf)
   val ipActor = system.actorOf(Props[ImageProcessorActor], name = "ip-actor")
 
-  ipActor ! "start"
 }

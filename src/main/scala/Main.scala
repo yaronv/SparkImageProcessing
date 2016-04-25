@@ -10,7 +10,11 @@ object Main extends App with LazyLogging {
 
     logger.info("application started")
 
-    Runner.run(2551)
+    val port:Int = if (args.isEmpty) 0 else args(0).toInt
+
+    Runner.run(port)
+
+//    ip1.ipActor ! "start"
 
   }
 
@@ -20,7 +24,7 @@ object Main extends App with LazyLogging {
   * General cluster runner object
   */
 object Runner {
-  def run(port: Int): Unit = {
+  def run(port: Int): ImageProcessor = {
     new ImageProcessor(port)
   }
 }
